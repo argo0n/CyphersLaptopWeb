@@ -6,11 +6,15 @@ app = Flask(__name__)
 @app.route('/video')
 def video():
     video_url = request.args.get('url')
+    text = request.args.get('text')
     if video_url:
         # Parse the video name and file format
         video_name, file_format = os.path.splitext(os.path.basename(video_url))
         # Set the title and description
-        title = video_name
+        if text:
+            title = text
+        else:
+            title = video_name
         description = file_format
         # If the name or format could not be parsed, use a fallback value
         if not title:
@@ -23,4 +27,5 @@ def video():
 
 
 if __name__ == '__main__':
-    app.run()
+    from waitress import serve
+    serve(app, host="0.0.0.0", port=8080)
