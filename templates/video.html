@@ -16,15 +16,14 @@
         <meta property="og:video" content="{{ video_url }}">
         <meta property="og:video" content="{{ video_url }}">
         <meta property="og:title" content="{{ title }}">
+        <meta property="og:image" content="{{ image }}">
         <meta property="og:description" content="{{ description }}">
-        <!-- <meta property="og:image" content="{{ url_for('static', filename='amongus.jpg') }}"> -->
         <meta property="og:image:width" content="1280">
         <meta property="og:image:height" content="720">
         <meta property="og:video:width" content="1280">
         <meta property="og:video:height" content="720">
     </head>
     <body>
-        <!-- Have text that says this page is a gateway to show the video in Discord link preview. To see the actual video, click here -->
         <p>This page is a gateway to show the video in Discord's link preview. <a href="{{ video_url }}">Click here</a> to see the video</p>
     </body>
 </html>

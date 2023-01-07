@@ -9,6 +9,7 @@ app = Flask(__name__)
 def video():
     video_url = request.args.get('url')
     text = request.args.get('text')
+    image = request.args.get('image')
     if video_url:
         # Parse the video name and file format
         video_name, file_format = os.path.splitext(os.path.basename(video_url))
@@ -23,7 +24,9 @@ def video():
             title = "Video"
         if not description:
             description = "Video file"
-        return render_template('video.html', video_url=video_url, title=title, description=description)
+        if not image:
+            image = ""
+        return render_template('video.html', video_url=video_url, title=title, description=description, image=image)
     else:
         abort(400, "Missing url parameter")
 
