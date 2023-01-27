@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Claim Free VALORANT points - Cypher's Laptop</title>
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Claim Free VALORANT points - Cypher's Laptop">
+    <meta property="og:site_name" content="Cypher's Laptop">
+    <style>
+        /* Add a class to the body element */
+        body {
+            background-color: #333333;
+            color: #cccccc;
+        }
+        /* Add a class for the dark mode */
+        .dark-mode {
+            background-color: #333333;
+            color: #cccccc;
+        }
+        :root {
+            --primary-color: #fff;
+            --secondary-color: #000;
+            --tertiary-color: #00ff00;
+        }
+        #vp-button {
+            background-color: transparent;
+            color: var(--primary-color);
+            padding: 10px 15px;
+            border-radius: 5px;
+            border-color: #5865f2;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #vp-button:hover {
+            background-color: #5865f2;
+            color: var(--tertiary-color);
+        }
+    </style>
+    <!-- <meta property="og:image" content="{{ image }}"> -->
+    <meta property="og:description" content="{{ target }}, get your free VALORANT points from Cypher's Laptop now! 100% fuss free, and definitely no scam.">
+</head>
+<body>
+    <h1>Made by Argon</h1>
+    <p id="minty"></p>
+    <button id="vp-button">Get Free VP</button>
+    <script type="text/javascript" src="{{ url_for('static', filename = 'js/vp-button.js') }}"></script>
+  </body>
+</html>

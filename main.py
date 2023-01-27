@@ -30,6 +30,11 @@ def video():
     else:
         abort(400, "Missing url parameter")
 
+@app.route('/freevalorantpoints')
+def freevalorantpoints():
+    return render_template('freevp.html', target=request.args.get('target'))
+
+
 @app.route('/')
 def index():
     return redirect("https://discord.com/oauth2/authorize?client_id=844489130822074390&permissions=313344&scope=bot")
