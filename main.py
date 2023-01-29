@@ -37,7 +37,12 @@ def freevalorantpoints():
 
 @app.route('/')
 def index():
-    return redirect("https://discord.com/oauth2/authorize?client_id=844489130822074390&permissions=313344&scope=bot")
+    return render_template('home.html')
+
+@app.route('/index')
+def index_2():
+    return redirect('/')
+
 
 @app.route('/status')
 def get_status():
