@@ -5,6 +5,10 @@ import os
 
 app = Flask(__name__)
 
+@app.route('/invite')
+def invite():
+    return redirect('https://discord.com/oauth2/authorize?client_id=844489130822074390&permissions=313344&scope=bot')
+
 @app.route('/video')
 def video():
     video_url = request.args.get('url')
@@ -31,13 +35,27 @@ def video():
         abort(400, "Missing url parameter")
 
 @app.route('/freevalorantpoints')
+@app.route('/freevalorantpoints.html')
 def freevalorantpoints():
     return render_template('freevp.html', target=request.args.get('target'))
 
+@app.route('/privacy')
+@app.route('/privacy.html')
+def privacy():
+    return render_template('privacy.html')
+
+
+@app.route('/terms')
+@app.route('/terms.html')
+def terms():
+    return render_template('terms.html')
+
 
 @app.route('/')
+@app.route('/index')
+@app.route('/index.html')
 def index():
-    return render_template('home.html')
+    return render_template('index.html')
 
 @app.route('/index')
 def index_2():
