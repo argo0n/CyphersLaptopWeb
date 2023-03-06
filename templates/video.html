@@ -1,29 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-JN8N7WZDPJ"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JN8N7WZDPJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-          gtag('config', 'G-JN8N7WZDPJ');
-        </script>
-        <title>Title</title>
-        <meta charset="UTF-8">
-        <meta property="og:type" content="video.other">
-        <meta property="og:video" content="{{ video_url }}">
-        <meta property="og:video" content="{{ video_url }}">
-        <meta property="og:title" content="{{ title }}">
-        <meta property="og:site_name" content="Cypher's Laptop">
-        <meta property="og:image" content="{{ image }}">
-        <meta property="og:description" content="{{ description }}">
-        <meta property="og:image:width" content="1280">
-        <meta property="og:image:height" content="720">
-        <meta property="og:video:width" content="1280">
-        <meta property="og:video:height" content="720">
-    </head>
-    <body>
-        <p>This page is a gateway to show the video in Discord's link preview. <a href="{{ video_url }}">Click here</a> to see the video</p>
-    </body>
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'G-JN8N7WZDPJ');
+    </script>
+    <title>Title</title>
+    <meta charset="UTF-8">
+    <meta property="og:type" content="video.other">
+    <meta property="og:video" content="{{ video_url }}">
+    <meta property="og:video" content="{{ video_url }}">
+    <meta property="og:title" content="{{ title }}">
+    <meta property="og:site_name" content="Cypher's Laptop">
+    <meta property="og:image" content="{{ image }}">
+    <meta property="og:description" content="{{ description }}">
+    <meta property="og:image:width" content="1280">
+    <meta property="og:image:height" content="720">
+    <meta property="og:video:width" content="1280">
+    <meta property="og:video:height" content="720">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="./static/img/icons/icon_180.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./static/img/icons/icon_16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./static/img/icons/icon_32.png">
+    <link rel="icon" type="image/png" sizes="180x180" href="./static/img/icons/icon_180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="./static/img/icons/icon_192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="./static/img/icons/icon_512.png">
+    <link rel="stylesheet" href="./static/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&amp;display=swap">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli&amp;display=swap">
+    <link rel="stylesheet" href="./static/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="./static/css/untitled.css">
+    <style>
+        .navbar {
+            background-color: white !important;
+        }
+
+        .navbar-nav .nav-link {
+            color: black !important;
+        }
+
+        .navbar-shrink .navbar-nav .nav-link {
+            color: black !important;
+        }
+    </style>
+</head>
+<body>
+<body id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="56">
+<nav class="navbar navbar-light navbar-expand-lg fixed-top" id="mainNav">
+    <div class="container"><a class="navbar-brand" href="./"
+                              style="font-family: Lato, sans-serif;font-weight: bold;"><img
+            src="./static/img/icons/icon_32.png" width="32" height="32" style="border-radius: 50%;margin-right: 15px;">Cypher's
+        Laptop</a>
+        <button data-bs-toggle="collapse" data-bs-target="#navbarResponsive" class="navbar-toggler float-end"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i
+                class="fa fa-bars"></i></button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="./terms">Terms</a></li>
+                <li class="nav-item"><a class="nav-link" href="./privacy">Privacy</a></li>
+                <li class="nav-item"><a class="nav-link" href="./invite">Invite</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<section>
+    <h2 style="text-align: center">{{ title }}</h2>
+    <h3 style="text-align: center">{{ description }}</h3>
+</section>
+<section>
+  <div style="max-width: 800px; margin: 0 auto;">
+    <video controls style="max-width: 100%; height: auto;">
+    <source src="{{ video_url }}" type="video/mp4">
+    Your browser does not support the video tag.
+    </video>
+  </div>
+</section>
+<footer>
+    <div class="container">
+        <p>© Copyright Argon 2022. All Rights Reserved.</p>
+        <p>Cypher's Laptop is not endorsed by Riot Games and does not reflect the views or opinions of Riot Games or
+            anyone officially involved in producing or managing Riot Games properties. Riot Games and all associated
+            properties are trademarks or registered trademarks of Riot Games, Inc.</p>
+        <ul class="list-inline">
+            <li class="list-inline-item"><a href="./privacy/">Privacy</a></li>
+            <li class="list-inline-item"><a href="./terms/">Terms</a></li>
+        </ul>
+    </div>
+</footer>
+<script src="./static/bootstrap/js/bootstrap.min.js"></script>
+<script src="./static/js/new-age.js"></script>
+</body>
 </html>
